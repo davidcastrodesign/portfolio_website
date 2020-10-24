@@ -1,13 +1,21 @@
 {
   "name": "portfolio_website",
   "version": "1.0.0",
-  "description": "Portfolio website",
+  "description": "portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/scss/ --recursive"
   },
-  "author": "david castro castaneda",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidcastrodesign/portfolio_website.git"
+  },
+  "author": "David Castro Castaneda",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidcastrodesign/portfolio_website/issues"
+  },
+  "homepage": "https://github.com/davidcastrodesign/portfolio_website#readme",
   "devDependencies": {
     "node-sass": "^4.14.1"
   }
