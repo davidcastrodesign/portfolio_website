@@ -1,5 +1,5 @@
 # portfolio_website
 
-Professional Personal Work Website
+Own Personal Work Website
 
 All works and information are included in this site.
