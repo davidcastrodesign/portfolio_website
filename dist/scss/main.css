@@ -496,4 +496,23 @@ img {
       width: 7rem;
       padding-top: 1.5rem; }
     #header-home .header-content h1 {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+  .items {
+    grid-template-columns: 1fr; } }
+
+@media (max-height: 330px) {
+  #header-home .header-content {
+    padding-top: 3rem; }
+    #header-home .header-content #profile-pic {
+      width: 7rem;
+      padding-top: 1.5rem; }
+    #header-home .header-content h1 {
+      font-size: 2rem; }
+  #home-c .process {
+    grid-template-columns: repeat(2, 1fr); }
+  .items {
+    grid-template-columns: 1fr; }
+  #about-d .testimonials {
+    grid-template-columns: 1fr; }
+  #contact-a .text-fields {
+    gap: 1rem; } }
