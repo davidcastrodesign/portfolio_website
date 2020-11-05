@@ -516,3 +516,43 @@ img {
     grid-template-columns: 1fr; }
   #contact-a .text-fields {
     gap: 1rem; } }
+
+.button {
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+  background: none;
+  border: none; }
+
+.button:hover {
+  color: #333; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal-content {
+  color: #f4f4f4;
+  background-color: rgba(51, 51, 51, 0.95);
+  padding: 20px auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2); }
+
+.closeBtn {
+  color: grey;
+  float: right;
+  font-size: 1.5rem;
+  padding-right: 5%;
+  margin-top: -2.5%; }
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer; }
