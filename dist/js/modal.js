@@ -1,30 +1,36 @@
-// Get modal element
-const modal = document.getElementById('simpleModal');
-// Get open modal button
-const modalBtn = document.getElementById('modalBtn');
-// Get close button
-const closeBtn = document.getElementsByClassName('closeBtn')[0];
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
-// Listen for open click
-modalBtn.addEventListener('click', openModal);
-// Listen for close click
-closeBtn.addEventListener('click', closeModal);
-// Listen for Outside click
-window.addEventListener('click', outsideCLick);
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
 
-// Function to open modal
-function openModal() {
-  modal.style.display = 'block';
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
 }
 
-// Function to close modal
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Function to close modal if outside click
-function outsideCLick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
 }
