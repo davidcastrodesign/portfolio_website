@@ -456,7 +456,8 @@ img {
   #home-c .process,
   #about-d .testimonials,
   #contact-b .contact-info,
-  .items {
+  .items,
+  #work-a .items-graphic {
     grid-template-columns: 1fr; }
   #home-a .specials div {
     border-bottom: 1px #f4f4f4 solid;
@@ -498,6 +499,8 @@ img {
     #header-home .header-content h1 {
       font-size: 2rem; }
   .items {
+    grid-template-columns: 1fr; }
+  #work-a .items-graphic {
     grid-template-columns: 1fr; } }
 
 @media (max-height: 330px) {
@@ -515,15 +518,17 @@ img {
   #about-d .testimonials {
     grid-template-columns: 1fr; }
   #contact-a .text-fields {
-    gap: 1rem; } }
-
-#work-b {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0 2%; }
+    gap: 1rem; }
+  #work-a .items-graphic {
+    grid-template-columns: 1fr; } }
 
 button {
   border: none; }
+
+.items-graphic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
 
 .modal {
   position: fixed;
