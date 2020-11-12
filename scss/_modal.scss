@@ -1,0 +1,77 @@
+button {
+  border: none;
+}
+
+.items-graphic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  transition: 400ms ease-in-out;
+  z-index: 10;
+  background: rgba($color: $dark-color, $alpha: 0.95);
+  text-align: left;
+  color: $medium-color;
+  margin-left: 35%;
+  width: 65%;
+  overflow: auto;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10% 0 10%;
+    font-size: 1.5rem;
+
+    .close-button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 2rem;
+      color: grey;
+    }
+
+    .close-button:hover {
+      color: $light-color;
+    }
+  }
+
+  &-body {
+    padding: 2% 10% 0 10%;
+
+    img {
+      padding: 5% 0;
+    }
+  }
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 400ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
