@@ -1,8 +1,12 @@
 # portfolio_website
 
-Own Personal Work Website
+# About
+
+Personal Work Website
 
 All works and information are included in this site.
+My webstite is divided into four main sections; Home, About, Work & Contact.
+It is mainly coded using SCSS, HTML for content, Vanilla Javascript for the graphic project modals, & PHP to accept emails.
 
 ## Click [here](https://davidcastrodesign.github.io/number_guesser/) for the live app.
 
