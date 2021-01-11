@@ -93,6 +93,13 @@ input[class^='btn-']:hover {
   display: block;
   margin: 0 auto 1rem auto; }
 
+.app-content {
+  padding: 0 1rem;
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0;
+  color: #343025; }
+
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -154,15 +161,15 @@ input[class^='btn-']:hover {
   .item-text-wrap {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%); }
   .item-text-title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 0 1rem;
     margin: 5px 0 0 0; }
   .item-text-category {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0.7;
     margin: 0; }
 
@@ -177,7 +184,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #f4f4f4; }
+  color: #333; }
 
 ul {
   list-style: none; }
@@ -521,6 +528,18 @@ img {
     gap: 1rem; }
   #work-a .items-graphic {
     grid-template-columns: 1fr; } }
+
+@media (max-height: 569px), (max-height: 653px) {
+  .app-content {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .app-content {
+    font-size: 0.6rem; } }
+
+@media (min-width: 800px) {
+  .app-content {
+    font-size: 0.9rem; } }
 
 button {
   border: none; }

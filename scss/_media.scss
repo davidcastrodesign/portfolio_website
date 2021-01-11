@@ -210,7 +210,29 @@
     }
   }
 
-  #work-a .items-graphic {
-    grid-template-columns: 1fr;
+  #work {
+    &-a {
+      .items-graphic {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media (max-height: 569px), (max-height: 653px) {
+  .app-content {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-content {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .app-content {
+    font-size: 0.9rem;
   }
 }
